@@ -1,0 +1,42 @@
+.MuiAppBar-root {
+  position: static !important;
+  padding: 10px 100px !important;
+}
+
+.navbar-logo {
+  width: 180px;
+}
+
+.menuItem {
+  font-size: 22px !important;
+  font-family: 'Roboto Slab' !important;
+  margin-left: 30px !important;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.menuItem:hover {
+  color: #e4e8f5 !important;
+}
+
+.menuItem > .MuiStack-root>:not(style)~:not(style) {
+  margin-left: 20px !important;
+}
+
+.icon .MuiIconButton-root {
+  border-radius: 5px;
+}
+
+.icon .MuiIconButton-root:hover {
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 800px) {
+  .MuiAppBar-root {
+    position: static !important;
+    padding: 0px !important;
+  }
+  .navbar-logo {
+    width: 135px;
+  }
+}
