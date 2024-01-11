@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { AppBar, Toolbar, Button, IconButton, Stack, Link } from '@mui/material';
-import logo from '../../assets/costa_logo_white.png';
 import './Navbar.css';
-import { Navigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { AppBar, Toolbar, IconButton, Stack, Link, Fade, useMediaQuery, useTheme, Box } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
+import logo from '../../assets/costa_logo_white.png';
+import { Sidebar } from '../Sidebar/Sidebar';
 
 const pages = [
   {
@@ -23,51 +25,81 @@ const pages = [
     "link": "/insurance"
   },
   {
-    "name": "Accounting",
-    "link": "/accounting"
-  },
-  {
     "name": "Contact Us",
     "link": "/contact"
   }
 ];
 
-const Navbar = () => {
-  console.log('Pages,', pages);
+const languages = [
+  {
+    "id": "en",
+    "name": "English"
+  },
+  {
+    "id": "es",
+    "name": "Spanish"
+  }
+]
 
-  const [width, setWidth] = useState(0)
-  
+const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [navbarScrolled, setNavbarScrolled] = useState(false);
+
+  const theme = useTheme({
+    breakpoints: {
+      values: {
+        lg: 1000
+      },
+    }
+  });
+  console.log('theme', theme);
+  const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
+
+  const handleMenu = () => {
+    setMenuOpen((prev) => !prev)
+  }
+
+  const changeBackground = () => {
+    window.scrollY >= 80 ? setNavbarScrolled('true') : setNavbarScrolled(false)
+  }
+
   useEffect(() => {
-    function handleResize() {
-      setWidth(window.innerWidth)
-    }
-    
-    window.addEventListener("resize", handleResize)
-    
-    handleResize()
-    
-    return () => { 
-      window.removeEventListener("resize", handleResize)
-    }
-  }, [setWidth])
+    window.addEventListener('scroll', changeBackground);
+  }, window.removeEventListener("scroll", changeBackground))
+
+  useEffect(() => {
+    menuOpen ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto';
+  }, [menuOpen]);
 
   const AppMenu =() => {
-    if (width > 800) {
-      return (
-        <Stack direction='row' spacing={2}> 
-          {pages.map((page) => (
-            <Link href={page.link}underline="none" color='inherit' className='menuItem' sx={{ color: page.active ? 'black' : '#fff' }} key={page.name}>
-              {page.name}
-            </Link>
-          ))}
-        </Stack>
-      );
-    }
-    return ( <></> );
+    return (
+    isMobile ? (
+      <>
+      <div className='navbar-icon-btn'>
+        <IconButton className='navbar-icon' aria-label='menu' size='large' color='inherit' onClick={handleMenu}>
+          {menuOpen ? ( <CloseIcon /> ) : ( <MenuIcon /> )}
+        </IconButton>
+      </div>
+      <Fade in={menuOpen}>
+        <Box sx={{ zIndex: 1}}>
+          <Sidebar pages={pages} languages={languages} />
+        </Box>
+      </Fade>
+      </>
+    ) : (
+      <Stack direction='row' spacing={2} className='menuStack'> 
+        {pages.map((page) => (
+          <Link href={page.link} underline="none" className='menuItem' color='inherit' 
+            sx={{ color: page.active ? navbarScrolled ? '#6695fa' : 'black' : '#fff', transition: 'color 0.3s ease-in-out' }} key={page.name}>
+            {page.name}
+          </Link>
+        ))}
+      </Stack>
+    ));
   }
 
   return (
-    <AppBar color='transparent' style={{ background: 'transparent', boxShadow: 'none'}}>
+    <AppBar position='sticky' color='transparent' style={{ background: navbarScrolled ? 'black' : 'transparent', boxShadow: 'none', transition: 'background 0.3s ease-in-out'}}>
       <Toolbar>
         <div style={{ flexGrow: 1}} className='icon'>
           <IconButton size='large' edge='start' color='inherit' aria-label='logo'>

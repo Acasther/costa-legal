@@ -1,0 +1,65 @@
+.sidebar-container {
+  background: black;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  display: grid;
+  align-items: center;
+  height: 100%;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.sidebar-container > .MuiStack-root {
+  align-items: center;
+}
+
+.lang-dropdown-container {
+  display: flex;
+  justify-content: center;
+}
+
+.lang-dropdown-container > .MuiInputBase-root {
+  color: #FFFFFF;
+  font: 600 22px 'Libre Franklin', sans-serif;
+}
+
+.lang-dropdown > .MuiSvgIcon-root {
+  color: #FFFFFF;
+}
+
+.lang-dropdown > .MuiNativeSelect-nativeInput {
+  background-color: red;
+}
+
+.lang-dropdown > .MuiNativeSelect-select {
+  padding: 10px 10px;
+}
+
+.sidebar-stack > .MuiTypography-root {
+  font: 600 22px 'Libre Franklin', sans-serif;
+  letter-spacing: 0.7px;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 1024px) {
+/*   .sidebar-stack > .MuiTypography-root {
+    font-size: 40px; 
+  } */
+/*   .sidebar-container > .MuiStack-root {
+    row-gap: 20px;
+  }
+  .lang-dropdown-container > .MuiInputBase-root {
+    font-size: 40px; 
+  } */
+}
