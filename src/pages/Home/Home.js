@@ -79,20 +79,6 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Accouting Service */}
-      <div className='service-background' style={{ backgroundImage:`url(${accountingBackground})` }}>
-        <Typography variant='h2' lg={{ paddingTop: 5}}>Accounting</Typography>
-
-        <Typography variant='body1'  sx={{ paddingTop: 3, paddingRight: 30, paddingBottom: 5}}>
-          For immigrants in Costa Rica, focus on experiencing the beauty of the country. Let us handle your personal finances while you enjoy your time here. 
-          We offer customized financial solutions, ensuring your financial well-being
-        </Typography>
-
-        <div className='banner-btn'>
-          <Button sx={{ textTransform: 'none'}}>Read More</Button>
-        </div>
-      </div>
-
     </div>
 
 
@@ -129,7 +115,7 @@ const Home = () => {
             <Typography variant='body1' sx={{ paddingBottom: 7}}>info@costafirm.com</Typography>
 
             <Typography variant='h3' sx={{ color: '#99A7CA'}}>Social</Typography>
-            <Grid container spacing={0.5}>
+            <Grid container spacing={{ sm: 3, lg: 0.5 }}>
               <Grid item xs={6} sm={1} sx={{ textAlign: { xs: 'end'}}}>
                 <IconButton size='small' color='inherit'>
                   <InstagramIcon />
