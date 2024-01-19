@@ -1,0 +1,42 @@
+{
+  "common": {
+    "getInTouch": "Ponte en contacto",
+    "message": "Message",
+    "name": "Name",
+    "readMore": "Leer más",
+    "services": "Nuestros servicios",
+    "submit": "Enviar"
+  },
+  "contact": {
+    "email": "Correo electrónico",
+    "phone": "Teléfono",
+    "social": "Redes sociales"
+  },
+  "home": {
+    "aboutUs": {
+      "description": "En Costa Law Firm brindaremos servicios legales personalizados, con un equipo de abogados bilingües dedicados a guiar a los clientes a través de las complejidades del derecho costarricense, incluyendo inmigración, bienes raíces, negocios y asuntos comerciales.",
+      "title": "Acerca de nuestro bufete"
+    },
+    "immigration": {
+      "description": "Costa Law Firm se especializa en derecho de inmigración y ofrece servicios personalizados para individuos y empresas. Ayudamos a los clientes con solicitudes de visa, permisos de trabajo, solicitudes de residencia y ciudadanía.",
+      "title": "Inmigración"
+    },
+    "insurance": {
+      "description": "Ofrecemos servicios de seguros en Costa Rica, brindando cobertura integral para protegerlo a usted y sus activos. Nuestro equipo de profesionales de seguros experimentados trabaja con los principales proveedores de seguros para ofrecer una variedad de opciones de seguros, incluyendo salud, propiedad, responsabilidad, y más.",
+      "title": "Seguros"
+    },
+    "realEstate": {
+      "description": "Nuestro equipo legal brinda servicios legales integrales en bienes raíces a clientes que desean comprar, vender o invertir en propiedades en Costa Rica. Ofrecemos orientación legal personalizada y apoyo para garantizar una transacción fluida y exitosa.",
+      "title": "Bienes raíces"
+    },
+    "welcome": "Tu guía legal hacia un futuro más brillante en Costa Rica y más allá",
+    "welcomeBtn": "Reserva una consulta"
+  },
+  "links": {
+    "contactUs": "Contáctenos",
+    "home": "Inicio",
+    "immigration": "Inmigración",
+    "insurance": "Seguros",
+    "realEstate": "Bienes raíces"
+  }
+}

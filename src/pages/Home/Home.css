@@ -143,6 +143,7 @@
   }
   .service-background > p.MuiTypography-root {
     padding-right: 0px;
+    padding-bottom: 0px;
   }
   .contact {
     padding: 130px 2% 100px 2%;
@@ -151,13 +152,15 @@
     width: 200px;
     padding-bottom: 30px;
   }
+  .contact-grid > .MuiGrid-item {
+    padding: 0px;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .banner {
     margin-top: -110px;
     height: 40rem;
-    background-position: 0% -210%;
   }
   .welcome {
     color: #ffffff;
@@ -183,9 +186,6 @@
     font-size: 17px !important;
     padding-right: 0px !important;
   }
-  .about-us {
-    height: 430px;
-  }
   .about-us .MuiTypography-body1 {
     padding: 30px 0px;
   }
@@ -197,7 +197,13 @@
     padding: 70px 5% 100px 6%;
   }
   .contact-form .MuiTextField-root {
-    width: 340px;
+    width: 100%;
+  }
+  .contact-grid > .MuiGrid-item {
+    padding: 0px !important;
+  }
+  .contact > .MuiGrid-root {
+    width: 100%;
   }
   .contact-info {
     padding-top: 50px;

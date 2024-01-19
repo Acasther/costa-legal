@@ -1,16 +1,10 @@
 import './Sidebar.css';
-import React, { useState } from 'react';
+import React from 'react';
 import { Stack, Link, NativeSelect } from '@mui/material';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 export const Sidebar = ((props) => {
-  const {pages, languages} = props;
-  const [lang, setLang] = useState();
-
-  const changeLanguage = (event) => {
-    console.log('Change language', event.target.value);
-    setLang(event.target.value);
-  }
+  const {pages, languages, lang, handleLanguage} = props;
 
   return (
     <div className='sidebar-container'>
@@ -22,9 +16,9 @@ export const Sidebar = ((props) => {
         ))}
       </Stack>
       <div className='lang-dropdown-container'>
-        <NativeSelect className='lang-dropdown' IconComponent={KeyboardArrowDownIcon} defaultValue='English' value={lang} onChange={changeLanguage}>
+        <NativeSelect className='lang-dropdown' IconComponent={KeyboardArrowDownIcon} defaultValue={lang} value={lang} onChange={handleLanguage}>
           {languages.map((language) => (
-            <option value={language.id} style={{color: 'black'}}>{language.name}</option>
+            <option value={language.id} key={language.id} style={{color: 'black'}}>{language.name}</option>
           ))}
         </NativeSelect>
       </div>

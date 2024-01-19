@@ -8,74 +8,64 @@ import logo from '../../assets/costa_white_logo.png';
 import { Button, Grid, IconButton, Stack, TextField, Typography } from '@mui/material';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
+import { useTranslation } from 'react-i18next';
 
 const Home = () => {
+  const [t, i18n] = useTranslation("global");
+
   return (
     <>
     <div className="banner" style={{ backgroundImage:`url(${homeBackground})` }}>
       <div className='welcome'>
-        Your legal guide to a brighter future in Costa Rica and beyond
+        {t("home.welcome")}
         <div className='banner-btn'>
-          <Button size='large'>Book a free consultation</Button>
+          <Button size='large'>{t("home.welcomeBtn")}</Button>
         </div>
       </div>
     </div>
 
 
     <div className='about-us'>
-      <Typography variant='h2' sx={{ paddingBottom: 1 }}>About Our Firm</Typography>
+      <Typography variant='h2' sx={{ paddingBottom: 1 }}>{t("home.aboutUs.title")}</Typography>
       <span className='divider' style={{ marginBottom: 15 }}></span>
-      <Typography variant='body1'>
-        At Costa Law Firm we will deliver personalized legal services, with a team of bilingual lawyers who are 
-        dedicated to guiding clients through the complexities of Costa Rican law, including immigration, 
-        real estate, business, and commercial matters.
-      </Typography>
+      <Typography variant='body1'>{t("home.aboutUs.description")}</Typography>
     </div>
 
 
     <div className='services'>
       
-      <Typography variant='h2' sx={{ textAlign: 'center', paddingBottom: 1 }}>Our Services</Typography>
+      <Typography variant='h2' sx={{ textAlign: 'center', paddingBottom: 1 }}>{t("common.services")}</Typography>
       <span className='divider' style={{ marginBottom: 45 }}></span>
       {/* Immigration Service */}
       <div className='service-background' style={{ backgroundImage:`url(${immigrationBackground})` }}>
-        <Typography variant='h2' sx={{ paddingTop: 5}}>Immigration</Typography>
+        <Typography variant='h2' sx={{ paddingTop: 5}}>{t("home.immigration.title")}</Typography>
 
-        <Typography variant='body1' sx={{ paddingTop: 3, paddingRight: 30, paddingBottom: 5}}>
-          Costa Law Firm specializes in immigration law and offers personalized services for individuals and businesses. 
-          We help clients with visa applications, work permits, residency applications, and citizenship. 
-        </Typography>
+        <Typography variant='body1' sx={{ paddingTop: 3, paddingRight: 30, paddingBottom: 5}}>{t("home.immigration.description")}</Typography>
 
         <div className='banner-btn'>
-          <Button sx={{ textTransform: 'none'}}>Read More</Button>
+          <Button sx={{ textTransform: 'none'}}>{t("common.readMore")}</Button>
         </div>
       </div>
 
       {/* Real Estate Service */}
       <div className='service-background real-estate' style={{ backgroundImage:`url(${realEstateBackground})` }}>
-        <Typography variant='h2' sx={{ paddingTop: 5}}>Real Estate</Typography>
+        <Typography variant='h2' sx={{ paddingTop: 5}}>{t("home.realEstate.title")}</Typography>
 
-        <Typography variant='body1' sx={{ paddingTop: 3, paddingRight: 30, paddingBottom: 5}}>
-          Our legal team provides comprehensive real estate legal services to clients looking to buy, sell, or invest in property in Costa Rica. 
-          We offer personalized legal guidance and support to ensure a smooth and successful transaction. 
-        </Typography>
+        <Typography variant='body1' sx={{ paddingTop: 3, paddingRight: 30, paddingBottom: 5}}>{t("home.realEstate.description")}</Typography>
 
         <div className='banner-btn'>
-          <Button sx={{ textTransform: 'none'}}>Read More</Button>
+          <Button sx={{ textTransform: 'none'}}>{t("common.readMore")}</Button>
         </div>
       </div>
 
       {/* Insurance Service */}
       <div className='service-background' style={{ backgroundImage:`url(${insuranceBackground})` }}>
-        <Typography variant='h2' sx={{ paddingTop: 5}}>Insurance</Typography>
+        <Typography variant='h2' sx={{ paddingTop: 5}}>{t("home.insurance.title")}</Typography>
 
-        <Typography variant='body1' sx={{ paddingTop: 3, paddingRight: 30, paddingBottom: 5}}>
-          We offer insurance services in Costa Rica, providing comprehensive coverage to protect you and your assets. Our team of experienced 
-          insurance professionals works with top insurance providers to offer a range of insurance options, including health, property, liability, and more.
-        </Typography>
+        <Typography variant='body1' sx={{ paddingTop: 3, paddingRight: 30, paddingBottom: 5}}>{t("home.insurance.description")}</Typography>
 
         <div className='banner-btn'>
-          <Button sx={{ textTransform: 'none'}}>Read More</Button>
+          <Button sx={{ textTransform: 'none'}}>{t("common.readMore")}</Button>
         </div>
       </div>
 
@@ -83,15 +73,10 @@ const Home = () => {
 
 
     <div className='contact'>
-      <Grid container spacing={2} direction={{xs: 'column', sm: 'row'}} 
-        sx={{ 
-          marginLeft: {
-            xs: 0
-          }
-        }}>
+      <Grid container spacing={2} direction={{xs: 'column', sm: 'row'}} className='contact-grid' sx={{ marginLeft: { xs: 0 }}}>
         {/* Contact Grid */}
-        <Grid xs={8} className='contact-form' direction='row'>
-          <Typography variant='h2'>Get in Touch</Typography>
+        <Grid item xs={8} className='contact-form' direction='row'>
+          <Typography variant='h2'>{t("common.getInTouch")}</Typography>
           <Stack spacing={3}>
             <TextField required color='info' sx={{ background: '#e6e6e6', width: `500px`, marginTop: 2, accentColor: '#99A7CA' }} label='Name' variant='filled' size='medium' />
             <TextField required sx={{ background: '#e6e6e6', width: `500px`, marginTop: 2, accentColor: '#99A7CA' }} label='Email' variant='filled' size='medium' />
@@ -99,22 +84,22 @@ const Home = () => {
               sx={{ background: '#e6e6e6', width: `500px`, marginTop: 2, accentColor: '#99A7CA' }} 
               label='Message' variant='filled' size='medium' multiline={true} minRows={6} />
             <div className='submit-btn'>
-              <Button sx={{ textTransform: 'none', width: 130}}>Submit</Button>
+              <Button sx={{ textTransform: 'none', width: 130}}>{t("common.submit")}</Button>
             </div>
           </Stack>
         </Grid>
 
         {/* Info Grid */}
-        <Grid xs={12} sm={4}>
+        <Grid item xs={12} sm={4}>
           <div className='contact-info'>
             <img src={logo} alt="logo" className='contact-logo' />
-            <Typography variant='h3' sx={{ color: '#99A7CA'}}>Phone</Typography>
+            <Typography variant='h3' sx={{ color: '#99A7CA'}}>{t("contact.phone")}</Typography>
             <Typography variant='body1' sx={{ paddingBottom: 7}}>(506) 8390-8070</Typography>
 
-            <Typography variant='h3' sx={{ color: '#99A7CA'}}>Email</Typography>
+            <Typography variant='h3' sx={{ color: '#99A7CA'}}>{t("contact.email")}</Typography>
             <Typography variant='body1' sx={{ paddingBottom: 7}}>info@costafirm.com</Typography>
 
-            <Typography variant='h3' sx={{ color: '#99A7CA'}}>Social</Typography>
+            <Typography variant='h3' sx={{ color: '#99A7CA'}}>{t("contact.social")}</Typography>
             <Grid container spacing={{ sm: 3, lg: 0.5 }}>
               <Grid item xs={6} sm={1} sx={{ textAlign: { xs: 'end'}}}>
                 <IconButton size='small' color='inherit'>
