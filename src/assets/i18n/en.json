@@ -1,0 +1,42 @@
+{
+  "common": {
+    "getInTouch": "Get in Touch",
+    "message": "Message",
+    "name": "Name",
+    "readMore": "Read More",
+    "services": "Our Services",
+    "submit": "Submit"
+  },
+  "contact": {
+    "email": "Email",
+    "phone": "Phone",
+    "social": "Social"
+  },
+  "home": {
+    "aboutUs": {
+      "description": "At Costa Law Firm we will deliver personalized legal services, with a team of bilingual lawyers who are dedicated to guiding clients through the complexities of Costa Rican law, including immigration, real estate, business, and commercial matters.",
+      "title": "About Our Firm"
+    },
+    "immigration": {
+      "description": "Costa Law Firm specializes in immigration law and offers personalized services for individuals and businesses. We help clients with visa applications, work permits, residency applications, and citizenship.",
+      "title": "Immigration"
+    },
+    "insurance": {
+      "description": "We offer insurance services in Costa Rica, providing comprehensive coverage to protect you and your assets. Our team of experienced insurance professionals works with top insurance providers to offer a range of insurance options, including health, property, liability, and more.",
+      "title": "Insurance"
+    },
+    "realEstate": {
+      "description": "Our legal team provides comprehensive real estate legal services to clients looking to buy, sell, or invest in property in Costa Rica. We offer personalized legal guidance and support to ensure a smooth and successful transaction.",
+      "title": "Real Estate"
+    },
+    "welcome": "Your legal guide to a brighter future in Costa Rica and beyond",
+    "welcomeBtn": "Book a free consultation"
+  },
+  "links": {
+    "contactUs": "Contact Us",
+    "home": "Home",
+    "immigration": "Immigration",
+    "insurance": "Insurance",
+    "realEstate": "Real Estate"
+  }
+}

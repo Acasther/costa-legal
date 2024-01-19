@@ -6,46 +6,48 @@ import CloseIcon from '@mui/icons-material/Close';
 import logo from '../../assets/costa_logo_white.png';
 import { Sidebar } from '../Sidebar/Sidebar';
 import { KeyboardArrowDown } from '@mui/icons-material';
-
-const pages = [
-  {
-    "name": "Home",
-    "link": "/",
-    "active": true
-  },
-  {
-    "name": "Immigration",
-    "link": "/immigration"
-  },
-  {
-    "name": "Real Estate",
-    "link": "/real-estate"
-  },
-  {
-    "name": "Insurance",
-    "link": "/insurance"
-  },
-  {
-    "name": "Contact Us",
-    "link": "/contact"
-  }
-];
-
-const languages = [
-  {
-    "id": "en",
-    "name": "English - Inglés"
-  },
-  {
-    "id": "es",
-    "name": "Español - Spanish"
-  }
-]
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [navbarScrolled, setNavbarScrolled] = useState(false);
-  const [lang, setLang] = useState('es');
+  const [lang, setLang] = useState('en');
+  const [t, i18n] = useTranslation("global");
+
+  const pages = [
+    {
+      "name": t("links.home"),
+      "link": "/",
+      "active": true
+    },
+    {
+      "name": t("links.immigration"),
+      "link": "/immigration"
+    },
+    {
+      "name": t("links.realEstate"),
+      "link": "/real-estate"
+    },
+    {
+      "name": t("links.insurance"),
+      "link": "/insurance"
+    },
+    {
+      "name": t("links.contactUs"),
+      "link": "/contact"
+    }
+  ];
+
+  const languages = [
+    {
+      "id": "en",
+      "name": "English - Inglés"
+    },
+    {
+      "id": "es",
+      "name": "Español - Spanish"
+    }
+  ]
 
   const theme = useTheme({
     breakpoints: {
@@ -54,8 +56,6 @@ const Navbar = () => {
       },
     }
   });
-  console.log('theme', theme);
-  console.log('language', lang);
 
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
 
@@ -72,10 +72,18 @@ const Navbar = () => {
     return selectedLanguageObj.name.substring(0, 2).toUpperCase();
   }
 
-  const changeLanguage = (event) => {
-    console.log('Clicked language button', event);
-    setLang((prev) => prev = event.target.value);
+  const handleLanguage = (event) => {
+    console.log('Clicked handleLanguage new value to change to: ', event)
+    changeLanguage(event.target.value)
   }
+
+  const changeLanguage = (newLang) => {
+    setLang(newLang);
+  }
+
+  useEffect(() => {
+    i18n.changeLanguage(lang);
+  }, [lang]);
 
   useEffect(() => {
     window.addEventListener('scroll', changeBackground);
@@ -96,7 +104,7 @@ const Navbar = () => {
       </div>
       <Fade in={menuOpen}>
         <Box sx={{ zIndex: 1}}>
-          <Sidebar pages={pages} languages={languages} />
+          <Sidebar pages={pages} languages={languages} lang={lang} handleLanguage={handleLanguage} />
         </Box>
       </Fade>
       </>
@@ -110,7 +118,7 @@ const Navbar = () => {
         ))}
         <FormControl sx={{ m: 1, minWidth: 80 }}>
           <Select sx={{ fontSize: '22px', fontWeight: 600, color: 'white', fill: 'white' }} defaultValue={lang} value={lang} IconComponent={KeyboardArrowDown}
-            onChange={(e, newValue) => { if(newValue) changeLanguage(e) }} className='language-button' renderValue={renderLangOption}>
+            onChange={handleLanguage} className='language-button' renderValue={renderLangOption}>
             {languages.map((language) => (
               <MenuItem sx={{ fontWeight: lang === language.id ? 600 : 400, fontSize: '22px'}} value={language.id} key={language.id}>{language.name}</MenuItem>
             ))}
