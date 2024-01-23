@@ -2,7 +2,22 @@ import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
   typography: {
-    "fontFamily": 'Libre Franklin'
+    fontFamily: 'Libre Franklin, sans-serif',
+    body1: {
+      fontSize: '20px'
+    },
+    h1: {
+      fontFamily: 'Abhaya Libre',
+    },
+    h2: {
+      fontFamily: 'Abhaya Libre',
+    }
+  },
+  MuiTypography: {
+    fontFamily: 'Libre Franklin, sans-serif'
+  },
+  MuiInputBase: {
+    fontSize: '20px'
   }
 });
 

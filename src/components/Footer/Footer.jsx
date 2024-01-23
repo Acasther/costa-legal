@@ -4,6 +4,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import { Button, Grid, IconButton, Stack, TextField, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+import './Footer.css';
 
 const Footer = () => {
   const [t, i18n] = useTranslation("global");
@@ -30,22 +31,22 @@ const Footer = () => {
       <Grid item xs={12} sm={4}>
         <div className='contact-info'>
           <img src={logo} alt="logo" className='contact-logo' />
-          <Typography variant='h3' sx={{ color: '#99A7CA'}}>{t("contact.phone")}</Typography>
-          <Typography variant='body1' sx={{ paddingBottom: 7}}>(506) 8390-8070</Typography>
+          <Typography variant='h3' sx={{ color: '#99A7CA', fontSize: '34px'}}>{t("contact.phone")}</Typography>
+          <Typography variant='body1' sx={{ paddingBottom: 7}}>+506 8390-8070</Typography>
 
-          <Typography variant='h3' sx={{ color: '#99A7CA'}}>{t("contact.email")}</Typography>
+          <Typography variant='h3' sx={{ color: '#99A7CA', fontSize: '34px'}}>{t("contact.email")}</Typography>
           <Typography variant='body1' sx={{ paddingBottom: 7}}>info@costafirm.com</Typography>
 
-          <Typography variant='h3' sx={{ color: '#99A7CA'}}>{t("contact.social")}</Typography>
+          <Typography variant='h3' sx={{ color: '#99A7CA', fontSize: '34px'}}>{t("contact.social")}</Typography>
           <Grid container spacing={{ sm: 3, lg: 0.5 }}>
             <Grid item xs={6} sm={1} sx={{ textAlign: { xs: 'end'}}}>
-              <IconButton size='small' color='inherit'>
-                <InstagramIcon />
+              <IconButton sx={{ padding: 0 }} size='small' color='inherit'>
+                <InstagramIcon sx={{ fontSize: '1.9rem'}} />
               </IconButton>
             </Grid>
             <Grid item xs={6} sm={1} sx={{ textAlign: { xs: 'start'}}}>
-              <IconButton size='small' color='inherit'>
-                <FacebookIcon />
+              <IconButton sx={{ padding: 0 }} size='small' color='inherit'>
+                <FacebookIcon sx={{ fontSize: '1.9rem'}} />
               </IconButton>
             </Grid>
           </Grid>
