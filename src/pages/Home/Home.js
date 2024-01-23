@@ -3,11 +3,7 @@ import homeBackground from '../../assets/playa_lagosta.jpg';
 import immigrationBackground from '../../assets/immigration.jpg';
 import realEstateBackground from '../../assets/real_estate.jpg';
 import insuranceBackground from '../../assets/insurance.jpg';
-import accountingBackground from '../../assets/accounting.jpg';
-import logo from '../../assets/costa_white_logo.png';
-import { Button, Grid, IconButton, Stack, TextField, Typography } from '@mui/material';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookIcon from '@mui/icons-material/Facebook';
+import { Button, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 const Home = () => {
@@ -17,9 +13,9 @@ const Home = () => {
     <>
     <div className="banner" style={{ backgroundImage:`url(${homeBackground})` }}>
       <div className='welcome'>
-        {t("home.welcome")}
+        <Typography variant='h1'>{t("home.welcome")}</Typography>
         <div className='banner-btn'>
-          <Button size='large'>{t("home.welcomeBtn")}</Button>
+          <Button size='large' sx={{ textTransform: 'none'}}>{t("home.welcomeBtn")}</Button>
         </div>
       </div>
     </div>

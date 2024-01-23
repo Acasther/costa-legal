@@ -11,9 +11,9 @@
 }
 
 .menuStack > .MuiTypography-root {
-  font: 600 22px 'Libre Franklin', sans-serif;
+  font: 500 22px 'Libre Franklin', sans-serif;
   margin-left: 30px;
-  letter-spacing: 0.7px;
+  letter-spacing: 0.4px;
   transition: 0.3s;
 }
 
