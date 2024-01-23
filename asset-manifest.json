@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/costa-legal/static/css/main.d106124b.css",
+    "main.js": "/costa-legal/static/js/main.d1479984.js",
+    "static/media/playa_lagosta.jpg": "/costa-legal/static/media/playa_lagosta.4abb6d3a2d502edf74ef.jpg",
+    "static/media/accounting.jpg": "/costa-legal/static/media/accounting.fba94c4926582ebe0d8a.jpg",
+    "static/media/immigration.jpg": "/costa-legal/static/media/immigration.334b888dc1bbbf082281.jpg",
+    "static/media/real_estate.jpg": "/costa-legal/static/media/real_estate.5a70c354c3a664933d0b.jpg",
+    "static/media/insurance.jpg": "/costa-legal/static/media/insurance.e5286226f820fa39aada.jpg",
+    "static/media/costa_white_logo.png": "/costa-legal/static/media/costa_white_logo.020d7dcaf1734f21cc94.png",
+    "index.html": "/costa-legal/index.html",
+    "main.d106124b.css.map": "/costa-legal/static/css/main.d106124b.css.map",
+    "main.d1479984.js.map": "/costa-legal/static/js/main.d1479984.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d106124b.css",
+    "static/js/main.d1479984.js"
+  ]
+}
