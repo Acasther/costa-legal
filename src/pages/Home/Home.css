@@ -53,7 +53,7 @@
 .about-us {
   text-align: center;
   padding: 70px 50px;
-  height: 500px;
+  height: 450px;
 }
 
 .about-us .MuiTypography-h2 {
@@ -61,7 +61,7 @@
 }
 
 .about-us .MuiTypography-body1 {
-  padding: 30px 30%;
+  padding: 30px 23%;
 }
 
 .services {
