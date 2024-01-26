@@ -97,7 +97,7 @@ const Navbar = () => {
   useEffect(() => {
     console.log('Location', location);
     const parts = location.pathname.split('/');
-    const tab = pages.find(page => page.link === `/${parts[parts.length - 1]}`);
+    const tab = pages.find(page => page.link === `/${parts[parts.length - 1]}` || page.link === `/${parts[parts.length - 1]}/`);
     setActiveTab(tab.id);
     console.log('Active tab', activeTab);
   }, [location, activeTab]);
