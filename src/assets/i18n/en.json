@@ -22,7 +22,7 @@
       "title": "Immigration"
     },
     "insurance": {
-      "description": "We offer insurance services in Costa Rica, providing comprehensive coverage to protect you and your assets. Our team of experienced insurance professionals works with top insurance providers to offer a range of insurance options, including health, property, liability, and more.",
+      "description": "We offer insurance services in Costa Rica, providing comprehensive coverage to protect you and your assets. Our team of experienced professionals works with top insurance providers to offer a range of options, including health, property, liability, and more.",
       "title": "Insurance"
     },
     "realEstate": {
@@ -32,11 +32,18 @@
     "welcome": "Your legal guide to a brighter future in Costa Rica and beyond",
     "welcomeBtn": "Book a free consultation"
   },
+  "immigration": {
+    "titleCR": "Immigration in Costa Rica"
+  },
   "links": {
     "contactUs": "Contact Us",
     "home": "Home",
     "immigration": "Immigration",
     "insurance": "Insurance",
     "realEstate": "Real Estate"
+  },
+  "loremIpsum": {
+    "large": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "small": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   }
 }

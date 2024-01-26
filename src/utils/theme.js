@@ -11,6 +11,7 @@ const theme = createTheme({
     },
     h2: {
       fontFamily: 'Abhaya Libre',
+      fontSize: '52px'
     }
   },
   MuiTypography: {

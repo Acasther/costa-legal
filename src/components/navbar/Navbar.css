@@ -11,9 +11,10 @@
 }
 
 .menuStack > .MuiTypography-root {
-  font: 500 22px 'Libre Franklin', sans-serif;
+  font: 500 20px 'Libre Franklin', sans-serif;
   margin-left: 30px;
-  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
   transition: 0.3s;
 }
 
@@ -53,6 +54,30 @@
 .language-button > .MuiButtonBase-root:hover {
   background-color: transparent;
   color: #e4e8f5 !important;
+}
+
+.language-option {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 0px;
+  min-width: 130px;
+  align-items: center;
+}
+
+.language-name {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.language-flag-container {
+  grid-area: 1 / 2 / 2 / 3;
+  justify-content: flex-end;
+  display: flex;
+}
+
+.language-flag-image {
+  width: 32px;
 }
 
 @keyframes fadeIn {

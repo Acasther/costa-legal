@@ -11,6 +11,7 @@ import es from './assets/i18n/es.json';
 i18n.use(initReactI18next).init({
   interpolation: {escapeValue: false},
   lng: "en",
+  fallbackLng: ['en', 'es'],
   resources: {
     en: {
       global: en
