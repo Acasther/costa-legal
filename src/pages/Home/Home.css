@@ -6,11 +6,6 @@
   font-family: 'Abhaya Libre', serif !important;
 }
 
-.MuiTypography-body1 {
-  font-family: 'Libre Franklin', sans-serif !important;
-  font-size: 22px !important;
-}
-
 .banner {
   margin-top: -110px;
   background-repeat: no-repeat;
@@ -30,10 +25,10 @@
 
 .banner-btn > .MuiButton-root {
   min-width: 130px;
-  height: 50px;
+  height: 55px;
   color: #fff;
   padding: 15px 20px;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
@@ -41,7 +36,8 @@
   border-radius: 5px;
   border: 2px solid #171717;
   background: #171717;
-  font-size: 22px;
+  font-size: 20px;
+  text-transform: uppercase;
 }
 
 .welcome > .MuiTypography-root {
@@ -65,7 +61,6 @@
 }
 
 .about-us .MuiTypography-body1 {
-  font-size: 22px;
   padding: 30px 30%;
 }
 
@@ -82,7 +77,7 @@
 }
 
 .service-background {
-  min-height: 500px;
+  min-height: 400px;
   padding: 55px 15%;
   background-repeat: no-repeat;
   background-attachment: static;
@@ -93,10 +88,6 @@
 
 .service-content {
   max-width: 1210px;
-}
-
-.real-estate {
-  background-position: center !important;
 }
 
 @media screen and (max-width: 1024px) {
@@ -111,8 +102,8 @@
     padding-top: 5%;
   }
   .about-us {
-    padding: 70px 50px 0px;
-    height: 450px;
+    padding: 70px 5% 0px;
+    height: 400px;
   }
   .about-us .MuiTypography-body1 {
     padding: 30px 15%;
