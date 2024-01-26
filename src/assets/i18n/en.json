@@ -25,6 +25,10 @@
       "description": "We offer insurance services in Costa Rica, providing comprehensive coverage to protect you and your assets. Our team of experienced professionals works with top insurance providers to offer a range of options, including health, property, liability, and more.",
       "title": "Insurance"
     },
+    "location": {
+      "title": "Where we are",
+      "floor": "first floor"
+    },
     "realEstate": {
       "description": "Our legal team provides comprehensive real estate legal services to clients looking to buy, sell, or invest in property in Costa Rica. We offer personalized legal guidance and support to ensure a smooth and successful transaction.",
       "title": "Real Estate"

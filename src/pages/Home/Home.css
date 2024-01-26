@@ -90,6 +90,27 @@
   max-width: 1210px;
 }
 
+.location {
+  min-height: 750px;
+  padding: 55px 10%;
+  text-align: center;
+}
+
+.location-content {
+  padding: 50px 0px;
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 30px;
+}
+
+.location-text {
+  text-align: start;
+}
+
 @media screen and (max-width: 1024px) {
   .welcome {
     top: 25%;
@@ -125,6 +146,12 @@
   }
   .contact-grid > .MuiGrid-item {
     padding: 0px;
+  }
+  .location {
+    padding: 55px 5%;
+  }
+  .location-content {
+    width: 100%;
   }
 }
 
@@ -186,5 +213,23 @@
   }
   .contact-logo {
     width: 170px;
+  }
+  .location {
+    padding: 35px 5% !important;
+  }
+  .location-content {
+    display: block;
+    margin: 0;
+    padding-top: 20px;
+  }
+  .location-text {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  .location-text > .MuiTypography-h3 {
+    font-size: 40px;
+  }
+  .location-map > iframe {
+    width: -webkit-fill-available;
   }
 }

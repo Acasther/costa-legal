@@ -25,6 +25,10 @@
       "description": "Ofrecemos servicios de seguros en Costa Rica, brindando cobertura integral para protegerlo a usted y sus activos. Nuestro equipo de profesionales de seguros experimentados trabaja con los principales proveedores de seguros para ofrecer una variedad de opciones de seguros, incluyendo salud, propiedad, responsabilidad, y más.",
       "title": "Seguros"
     },
+    "location": {
+      "title": "Donde estamos",
+      "floor": "primer piso"
+    },
     "realEstate": {
       "description": "Nuestro equipo legal brinda servicios legales integrales en bienes raíces a clientes que desean comprar, vender o invertir en propiedades en Costa Rica. Ofrecemos orientación legal personalizada y apoyo para garantizar una transacción fluida y exitosa.",
       "title": "Bienes raíces"
