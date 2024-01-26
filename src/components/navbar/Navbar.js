@@ -127,10 +127,10 @@ const Navbar = () => {
           </Link>
         ))}
         <FormControl sx={{ m: 1, minWidth: 80 }}>
-          <Select sx={{ fontSize: '22px', fontWeight: 600, color: 'white', fill: 'white' }} defaultValue={lang} value={lang} IconComponent={KeyboardArrowDown}
+          <Select sx={{ fontSize: '20px', fontWeight: 500, color: 'white', fill: 'white' }} defaultValue={lang} value={lang} IconComponent={KeyboardArrowDown}
             onChange={handleLanguage} className='language-button' renderValue={renderLangOption}>
             {languages.map((language) => (
-              <MenuItem sx={{ fontWeight: lang === language.id ? 600 : 400, fontSize: '22px', width: '170px'}} value={language.id} key={language.id}>
+              <MenuItem sx={{ fontWeight: lang === language.id ? 600 : 400, fontSize: '20px', width: '170px'}} value={language.id} key={language.id}>
                 <div className='language-option'>
                   <div className='language-name'>{language.name}</div>
                   <div className='language-flag-container'><img src={language.flag} alt='logo' className='language-flag-image' /></div>
